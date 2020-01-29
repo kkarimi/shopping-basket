@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "lib": [ "es2015", "dom", "es7"],
+    "target": "ES5",
+    "module": "commonjs",
+    "outDir": "build",
+    "sourceMap": true
+  }
+}

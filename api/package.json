@@ -1,0 +1,29 @@
+{
+  "scripts": {
+    "start": "ts-node index.ts",
+    "test": "yarn run test:integration && yarn run test:unit",
+    "test:unit": "jest ./tests/unit --coverage",
+    "test:integration": "nyc mocha --require ts-node/register --require source-map-support/register --full-trace \"tests/**/*.test.ts\" --timeout 999999 --exit"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.7",
+    "@types/jest": "^24.9.1",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^13.1.8",
+    "chai": "^4.2.0",
+    "jest": "^25.1.0",
+    "mocha": "^7.0.1",
+    "nyc": "^15.0.0",
+    "sinon": "^8.1.1",
+    "supertest": "^4.0.2",
+    "ts-jest": "^25.0.0"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.5"
+  }
+}

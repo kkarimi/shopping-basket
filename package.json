@@ -1,0 +1,26 @@
+{
+  "name": "shopping-basket",
+  "version": "1.0.0",
+  "description": "This is a shopping basket service.",
+  "main": "index.js",
+  "scripts": {
+    "setup": "npm i -g yarn && cd api && yarn && cd ../frontend && yarn",
+    "start": "concurrently -k -n \"client,serve\" \"npm run start:api\" \"npm run start:frontend\"",
+    "start:api": "cd api && yarn start",
+    "start:frontend": "cd frontend && yarn start",
+    "test": "cd api && yarn test:integration"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kkarimi/shopping-basket.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kkarimi/shopping-basket/issues"
+  },
+  "homepage": "https://github.com/kkarimi/shopping-basket#readme",
+  "dependencies": {
+    "concurrently": "^5.1.0"
+  }
+}
